@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List - worknurjam</title>
+
+    <!-- CSS External -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <img src="https://picsum.photos/300/200" alt="Gambar acak dari Picsum" width="400" height="200">
+
+
+    <!-- Hero Website -->
+    <header>
+        <h1 class="text-3xl pb-4 text-sky-500 font-bold pl-6 pt-6">Todo List</h1>
+    
+    </header>
+
+    <!-- Main Content, Todo List Form, List Todo -->
+    <main>
+        <form>
+            <input type="text" id="task-input" placeholder="Add a todo..." class="border p-2 rounded">
+            <input type="date" id="due-date-input" class="border p-2 rounded">
+            <button type="button" onclick="validateForm();" class="bg-blue-300 text-black p-[10px] rounded">+</button>
+        </form>
+
+        <!-- Action button section -->
+        <section>
+            <br/>
+            <button class="bg-sky-500 text-white p-2 rounded">FILTER</button>
+            <button onclick="deleteAll()" class="bg-gray-500/50 text-black p-2 rounded">DELETE ALL</button>
+        </section>
+
+        <!-- List of Task -->
+        <section> 
+            <br>   
+            <table class="table table-zebra w-full">
+                <thead>
+                    <tr class="border-b w-full">
+                        <th class="w-2/5">Task</th>
+                        <th class="w-1/5">Due Date</th>
+                        <th class="w-1/5">Status</th>
+                        <th class="w-1/5">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="task-list">
+                    <!-- Task items will be dynamically added here -->
+                    <td colspan="5" class="text-center border-b p-4">No task found</td >
+                </tr>
+                </tbody>
+            </table>
+
+        </section>
+    </main>
+
+    <footer>
+        <br>
+        <span>&copy; worknurjam</span>
+    </footer>
+
+    <!-- JS External -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
